@@ -43,6 +43,9 @@ public class ProductManagerImpl implements ProductManager {
         }
         orderQueue.add(order);
 
+        User user = users.get(order.getUser());
+        user.getOrders().add(order);
+
     }
 
     @Override
